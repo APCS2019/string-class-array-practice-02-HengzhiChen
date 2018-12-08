@@ -16,7 +16,7 @@ public class Phrase
     public static int findNthOccurrence(String str, int n)
     {
         int loc = -1;
-        int count = 1;
+        int count = 0;
         String a = currentPhrase;
         while(a.indexOf(str)!=-1&&count!=n){
             loc = currentPhrase.length()-a.length()+a.indexOf(str);
