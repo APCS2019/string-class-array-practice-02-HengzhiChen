@@ -13,7 +13,23 @@ public class Phrase
      *  Precondition: str.length() > 0 and n > 0
      *  Postcondition: the current phrase is not modified.
      */
+    //M1 //
     public static int findNthOccurrence(String str, int n)
+    {
+        int loc = currentPhrase.indexOf(str);
+        int count = 1;
+        String a = currentPhrase;
+        while(loc!=-1){
+            a = currentPhrase.substring(loc+1);
+            loc = currentPhrase.length()-a.length()+a.indexOf(str);
+            count++;
+            if(count = n){
+                return loc;
+        }
+        return -1;
+    }
+        //M2//
+         public static int findNthOccurrence(String str, int n)
     {
         int loc = currentPhrase.indexOf(str);
         int count = 1;
